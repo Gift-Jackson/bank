@@ -28,8 +28,7 @@ const withdraw = () => {
             toast.classList.remove("is-active")
             input.classList.remove("error")
         }, 3000)
-        let currentAmount = 0;
-        digit.textContent = currentAmount;
+        
     } else {
         currentAmount -= withdrawalAmount;
         digit.textContent = currentAmount;
