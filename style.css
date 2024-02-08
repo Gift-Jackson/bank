@@ -45,6 +45,10 @@ header {
     background: linear-gradient(-45deg, skyblue, dodgerblue);
     padding: 1rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .balance span {
