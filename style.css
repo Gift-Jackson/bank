@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Poppins&family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #4a4a4a;
+}
+
+body {
+    background-color: dodgerblue;
+}
+
+.app {
+    margin: 2rem auto;
+    width: 400px;
+    background-color: #fefefe;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo span {
+    font-size: 1.5rem;
+}
+
+.bank {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.balance {
+    background: linear-gradient(-45deg, skyblue, dodgerblue);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.balance span {
+    color: #fefefe;
+}
+
+.currency,
+.digit {
+    font-size: 1.8rem;
+}
+
+.title {
+    opacity: .8;
+}
+
+.input-box {
+    margin-top: 2rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: .8rem;
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    font-size: 1rem;
+    caret-color: dodgerblue;
+}
+
+.input-box input.error {
+    border-color: crimson;
+    outline: 3px solid rgba(220, 20, 60, .3);
+    outline-offset: 2px;
+    box-shadow: 0 0 5px crimson;
+    animation: error 0.2s linear 1;
+}
+
+@keyframes error {
+    0% {
+        transform: translateX(-4px);
+    }
+
+    20% {
+        transform: translateX(4px);
+    }
+
+    40% {
+        transform: translateX(-4px);
+    }
+
+    60% {
+        transform: translateX(4px);
+    }
+
+    80% {
+        transform: translateX(-4px);
+    }
+}
+
+.input-box input:focus {
+    border-color: dodgerblue;
+    outline: 3px solid rgba(30, 144, 255, .3);
+    outline-offset: 2px;
+    box-shadow: 0 0 5px dodgerblue;
+}
+
+.btns {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btns button {
+    flex-grow: 1;
+    padding: .8rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.withdrawBtn {
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    color: #fefefe;
+}
+
+.depositBtn {
+    border: 1px solid dodgerblue;
+    background-color: transparent;
+    color: dodgerblue;
+}
+
+.btns button:hover {
+    background-color: #3a3a3a;
+    border-color: transparent;
+    color: #fefefe;
+}
+
+.btns button:active {
+    transform: scale(.9);
+}
+
+.history-container {
+    margin-top: 2rem;
+}
+
+.history-items {
+    margin-top: .5rem;
+    padding: .6rem;
+}
+
+.history-box {
+    background-color: #f5f5f5;
+    padding: .6rem;
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+.fund {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text {
+    background-color: #f9f9f9;
+    padding: .5rem 1rem;
+}
+
+.toast {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: translate(-50%, -50%);
+    background-color: #fe456a;
+    padding: .7rem 2rem;
+    border-radius: .5rem;
+    color: #fefefe;
+    display: none;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    z-index: 9;
+}
+
+.toast.is-active {
+    display: block;
+    animation: toastit 3000ms cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+}
+
+@keyframes toastit {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fund p.red{
+    color: crimson; /* Default color */
+}
+
+.fund p.red {
+    color: mediumseagreen;
+}
+
+
+@media (max-width: 400px) {
+    .app {
+        width: 100%;
+        min-height: 100vh;
+        margin: auto;
+        border-radius: unset;
+        padding: 1rem 1rem;
+    }
+}

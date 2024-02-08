@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="toast.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="logo">
+            <span class="material-symbols-outlined bank"> account_balance </span>
+            <span>Bank</span>
+        </div>
+      </header>
+      <div class="balance">
+        <span class="title">Total balance</span> <br />
+        <span class="currency">$</span><span class="digit"></span>
+      </div>
+
+      <div class="input-box">
+        <input type="number" placeholder="Enter an amount" />
+      </div>
+
+      <div class="btns">
+        <button class="withdrawBtn">Withdraw</button>
+        <button class="depositBtn">Deposit</button>
+      </div>
+
+      <div class="history-container">
+        <h3>Transaction history</h3>
+        <ol class="history-items">
+          <p class="text">No transactions yet!</p>
+          <template>
+            <li class="history-box">
+              <div class="type">Withdrawal</div>
+              <div class="fund">
+                <span>$</span><span class="amount">200</span>
+              </div>
+            </li>
+          </template>
+        </ol>
+      </div>
+
+      <div class="toast"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
