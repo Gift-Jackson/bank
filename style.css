@@ -47,6 +47,7 @@ header {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -213,11 +214,11 @@ header {
     }
 }
 
-.fund p.red{
-    color: crimson; /* Default color */
-}
 
-.fund p.red {
+.amount.red{
+    color: red;
+}
+.amount.green{
     color: mediumseagreen;
 }
 
